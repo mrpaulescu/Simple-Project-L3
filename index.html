@@ -3,50 +3,783 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Webpage</title>
+    <title>Suceava &amp; USV Horizon — CS Student &amp; Bucovina Weather Lab</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Page</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#galerie">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Pure CSS Theme Switcher Control -->
+    <input type="checkbox" id="theme-toggle" class="sr-only" aria-label="Toggle light mode">
 
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is a simple webpage created with HTML and CSS.</p>
-        </section>
+    <div class="site-shell">
+        <!-- Ambient Background Orbs -->
+        <div class="ambient-bg" aria-hidden="true">
+            <span class="orb orb-1"></span>
+            <span class="orb orb-2"></span>
+            <span class="orb orb-3"></span>
+        </div>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>Learn more about what we do.</p>
-        </section>
+        <header>
+            <div class="header-inner">
+                <a href="#home" class="brand">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-text">
+                        <strong>Suceava Horizon</strong>
+                        <small>USV Computer Science &amp; Bucovina Lab</small>
+                    </span>
+                </a>
 
-        <section id="galerie">
-            <h2>Gallery</h2>
-            <div class="galerie-grid">
-                <img src="https://placehold.co/600x400?text=Image+1" alt="Gallery placeholder image 1">
-                <img src="https://placehold.co/600x400?text=Image+2" alt="Gallery placeholder image 2">
-                <img src="https://placehold.co/600x400?text=Image+3" alt="Gallery placeholder image 3">
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Suceava &amp; Lab</a></li>
+                        <li><a href="#student">USV CS Life</a></li>
+                        <li><a href="#galerie">Gallery</a></li>
+                        <li><a href="#weather">Weather Lab</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <span class="live-pill" title="Suceava campus node online">
+                        <span class="live-dot"></span>
+                        SUCEAVA NODE
+                    </span>
+                    <label for="theme-toggle" class="theme-switch" title="Switch Light / Dark theme">
+                        <span class="icon-sun" aria-hidden="true">&#9728;</span>
+                        <span class="icon-moon" aria-hidden="true">&#9790;</span>
+                        <span class="switch-thumb"></span>
+                    </label>
+                </div>
             </div>
-        </section>
+        </header>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us!</p>
-        </section>
-    </main>
+        <main>
+            <!-- HERO / HOME SECTION -->
+            <section id="home" class="hero-section">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="eyebrow-badge">
+                            <span class="sparkle">&#10022;</span> Suceava, Romania &bull; 47.641&deg; N, 26.245&deg; E
+                        </div>
+                        <h1>
+                            Code, History &amp; <span class="gradient-text">Bucovina Skies</span> in Suceava.
+                        </h1>
+                        <p class="hero-lead">
+                            A digital field journal built from the campus of Universitatea &bdquo;&Scedil;tefan cel Mare&rdquo; din Suceava—combining Computer Science projects at FIESC with photography and microclimate telemetry from Cetatea de Scaun to Mun&tcedil;ii Rarău.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#galerie" class="btn btn-primary">Explore Suceava Landmarks</a>
+                            <a href="#student" class="btn btn-ghost">Meet the USV Student</a>
+                        </div>
 
-    <footer>
-        <p>&copy; 2025 My Simple Webpage. All rights reserved.</p>
-    </footer>
+                        <div class="hero-metrics">
+                            <div class="metric-item">
+                                <strong>1388</strong>
+                                <span>Cetatea de Scaun Era</span>
+                            </div>
+                            <div class="metric-item">
+                                <strong>FIESC</strong>
+                                <span>CS Faculty at USV</span>
+                            </div>
+                            <div class="metric-item">
+                                <strong>1,634 m</strong>
+                                <span>Rarău Peak Ridge</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-showcase" aria-label="Featured Suceava campus telemetry">
+                        <article class="glass-card floating-card-main">
+                            <div class="card-top">
+                                <span class="tag">NODE #01 &bull; STR. UNIVERSITĂȚII 13</span>
+                                <span class="status-online">Active</span>
+                            </div>
+                            <div class="mini-weather-hero">
+                                <div class="css-sun" aria-hidden="true">
+                                    <span class="sun-core"></span>
+                                    <span class="sun-rays"></span>
+                                </div>
+                                <div>
+                                    <div class="big-temp">14&deg;C</div>
+                                    <p class="sub-muted">Suceava Plateau &bull; Clear Moldavian Sky</p>
+                                </div>
+                            </div>
+                            <div class="telemetry-bars">
+                                <div class="bar-row">
+                                    <span>Visibility</span>
+                                    <div class="progress-track"><span style="--w: 88%"></span></div>
+                                    <strong>24 km</strong>
+                                </div>
+                                <div class="bar-row">
+                                    <span>Barometer</span>
+                                    <div class="progress-track"><span style="--w: 76%"></span></div>
+                                    <strong>1017 hPa</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="glass-card floating-card-secondary">
+                            <span class="tag">CAMPUS DISPATCH</span>
+                            <h3>Corp C &rarr; Cetatea de Scaun Walk</h3>
+                            <p>25 minutes on foot from USV lecture halls to medieval limestone walls overlooking the Suceava River.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Live Suceava Ticker -->
+                <div class="ticker-wrap" aria-label="Live Suceava &amp; Bucovina updates">
+                    <div class="ticker-track">
+                        <span>&#9679; USV CAMPUS (ARENI): 14&deg;C CLEAR SKY</span>
+                        <span>&#9679; CETATEA DE SCAUN: 13&deg;C LIGHT EAST WIND 11 KM/H</span>
+                        <span>&#9679; MUNȚII RARĂU (1,634M): 5&deg;C BRISK RIDGE AIR</span>
+                        <span>&#9679; VATRA DORNEI BASIN: 11&deg;C MORNING MIST CLEARING</span>
+                        <span>&#9679; HARD&amp;SOFT SUCEAVA: STUDENT CODING PREP IN CORP C</span>
+                        <span>&#9679; USV CAMPUS (ARENI): 14&deg;C CLEAR SKY</span>
+                        <span>&#9679; CETATEA DE SCAUN: 13&deg;C LIGHT EAST WIND 11 KM/H</span>
+                        <span>&#9679; MUNȚII RARĂU (1,634M): 5&deg;C BRISK RIDGE AIR</span>
+                        <span>&#9679; VATRA DORNEI BASIN: 11&deg;C MORNING MIST CLEARING</span>
+                        <span>&#9679; HARD&amp;SOFT SUCEAVA: STUDENT CODING PREP IN CORP C</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SUCEAVA & PROJECT SECTION -->
+            <section id="about" class="card-section">
+                <div class="section-header">
+                    <span class="section-kicker">01 / SUCEAVA &amp; BUCOVINA</span>
+                    <h2>Where Medieval Heritage Meets Modern Tech</h2>
+                    <p>Located on the Suceava Plateau in northeastern Romania, Suceava blends 14th-century Moldavian fortresses and UNESCO monasteries with an energetic university community.</p>
+                </div>
+
+                <div class="about-layout">
+                    <!-- Pure CSS Interactive Tabs -->
+                    <div class="tabs-container">
+                        <input type="radio" name="about-tab" id="tab-craft" class="tab-radio" checked>
+                        <input type="radio" name="about-tab" id="tab-sensors" class="tab-radio">
+                        <input type="radio" name="about-tab" id="tab-roadmap" class="tab-radio">
+
+                        <div class="tab-labels" role="tablist">
+                            <label for="tab-craft" role="tab">The City</label>
+                            <label for="tab-sensors" role="tab">USV Campus</label>
+                            <label for="tab-roadmap" role="tab">Bucovina Trips</label>
+                        </div>
+
+                        <div class="tab-panels">
+                            <div class="tab-panel">
+                                <h3>Former Seat of Moldavia</h3>
+                                <p>Suceava served as the capital of the Principality of Moldavia for nearly two centuries. Today, landmarks like Cetatea de Scaun, Parcul &Scedil;ipote, and Mănăstirea &bdquo;Sfântul Ioan cel Nou&rdquo; sit minutes away from bustling student cafés on Bulevardul 1 Mai.</p>
+                                <div class="feature-pills">
+                                    <span>Cetatea de Scaun</span>
+                                    <span>UNESCO Heritage</span>
+                                    <span>Suceava River Valley</span>
+                                </div>
+                            </div>
+
+                            <div class="tab-panel">
+                                <h3>Universitatea &bdquo;&Scedil;tefan cel Mare&rdquo; (USV)</h3>
+                                <p>Centered on Strada Universității nr. 13 across from Areni Park, USV brings together 11 faculties, engineering laboratories in Corp C and Corp E, an Astronomical Observatory &amp; Planetarium, and student dormitories right on campus.</p>
+                                <div class="sensor-specs">
+                                    <div><strong>11</strong><span>Faculties</span></div>
+                                    <div><strong>FIESC</strong><span>CS &amp; Engineering</span></div>
+                                    <div><strong>1963</strong><span>Academic Roots</span></div>
+                                </div>
+                            </div>
+
+                            <div class="tab-panel">
+                                <h3>Weekend Routes Around Suceava</h3>
+                                <ul class="roadmap-list">
+                                    <li><span class="badge-done">City Walk</span> Parcul Areni &rarr; Parcul &Scedil;ipote &rarr; Cetatea de Scaun</li>
+                                    <li><span class="badge-active">Day Trip</span> Dragomirna Monastery &amp; Reservoir Lake (15 km N)</li>
+                                    <li><span class="badge-next">Mountain</span> Câmpulung Moldovenesc &rarr; Pietrele Doamnei (Rarău)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pure CSS Accordion FAQ -->
+                    <div class="faq-stack">
+                        <h3>Suceava Quick Guide</h3>
+                        <details open>
+                            <summary>What makes Suceava unique for students?</summary>
+                            <p>Everything is walkable: lecture halls, dorms, the Planetarium, Areni Park, and the city center are all clustered closely, while the Carpathian foothills begin less than an hour west by train or bus.</p>
+                        </details>
+                        <details>
+                            <summary>What is FIESC at USV?</summary>
+                            <p>FIESC is the Faculty of Electrical Engineering and Computer Science (Facultatea de Inginerie Electrică &scedil;i &Scedil;tiința Calculatoarelor), home to Suceava&rsquo;s Computers (CTI), Automation, and Applied Informatics programs.</p>
+                        </details>
+                        <details>
+                            <summary>How is the climate in Suceava?</summary>
+                            <p>Suceava has a temperate-continental climate with crisp, sunny autumns, snowy winters shaped by the Eastern Carpathians, and mild spring mornings ideal for outdoor photography.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- USV SUCEAVA COMPUTER SCIENCE STUDENT SECTION -->
+            <section id="student" class="card-section">
+                <div class="section-header">
+                    <span class="section-kicker">02 / USV SUCEAVA &bull; COMPUTER SCIENCE</span>
+                    <h2>Student Life at Universitatea &bdquo;&Scedil;tefan cel Mare&rdquo; din Suceava</h2>
+                    <p>Meet our fictional 3rd-year Computer Science student studying at FIESC in Suceava—balancing systems programming in Corp C with local hackathons and Bucovina mountain trails.</p>
+                </div>
+
+                <div class="about-layout">
+                    <!-- Fake Student Profile Card -->
+                    <article class="contact-info-card">
+                        <div class="card-top">
+                            <span class="tag">USV &bull; FIESC &bull; CALCULATOARE (CTI)</span>
+                            <span class="status-online">Year III Student</span>
+                        </div>
+
+                        <div>
+                            <h3>Andrei-Matei Popescu</h3>
+                            <p class="sub-muted">B.Sc. Computer Science &amp; Engineering &bull; Cămin C3, Str. Universității 13, Suceava</p>
+                        </div>
+
+                        <p>
+                            Andrei came to Suceava from nearby Boto&scedil;ani to study Computer Science at FIESC. His weekdays revolve around morning courses in Corp A, C++ and Linux networking labs in Corp C, coffee breaks by Parcul Areni, and building lightweight web interfaces for campus weather sensors.
+                        </p>
+
+                        <div class="sensor-specs">
+                            <div><strong>9.45</strong><span>Semester GPA</span></div>
+                            <div><strong>3rd Year</strong><span>CTI Track</span></div>
+                            <div><strong>14</strong><span>Lab Projects</span></div>
+                        </div>
+
+                        <div class="telemetry-bars">
+                            <div class="bar-row">
+                                <span>Algorithms</span>
+                                <div class="progress-track"><span style="--w: 94%"></span></div>
+                                <strong>94%</strong>
+                            </div>
+                            <div class="bar-row">
+                                <span>Web UI</span>
+                                <div class="progress-track"><span style="--w: 91%"></span></div>
+                                <strong>91%</strong>
+                            </div>
+                            <div class="bar-row">
+                                <span>Systems</span>
+                                <div class="progress-track"><span style="--w: 86%"></span></div>
+                                <strong>86%</strong>
+                            </div>
+                        </div>
+
+                        <div class="feature-pills">
+                            <span>C / C++</span>
+                            <span>Linux &amp; Git</span>
+                            <span>HTML &amp; CSS</span>
+                            <span>Hard&amp;Soft USV</span>
+                            <span>Embedded IoT</span>
+                        </div>
+                    </article>
+
+                    <!-- Campus Milestones & Interactive FAQ -->
+                    <div class="faq-stack">
+                        <div class="contact-info-card">
+                            <span class="tag">ACADEMIC &amp; CAMPUS MILESTONES</span>
+                            <h3>Life on the Suceava Campus</h3>
+                            <ul class="roadmap-list">
+                                <li><span class="badge-done">Completed</span> Data Structures, OOP &amp; Databases (Corp C Labs)</li>
+                                <li><span class="badge-done">Completed</span> Hard&amp;Soft Suceava Prep &mdash; Campus Weather Dashboard</li>
+                                <li><span class="badge-active">In Progress</span> Operating Systems, Computer Networks &amp; Thesis Topic</li>
+                                <li><span class="badge-next">Summer</span> Software Engineering Internship in Suceava</li>
+                            </ul>
+                        </div>
+
+                        <details open>
+                            <summary>What is a typical day for Andrei at USV?</summary>
+                            <p>8:00 AM walk from Cămin C3 past the Suceava Planetarium to Corp E for a Networks lecture, lunch near Areni, two hours of hands-on debugging in Corp C, and an evening sunset run up toward Cetatea de Scaun.</p>
+                        </details>
+
+                        <details>
+                            <summary>What is Hard&amp;Soft Suceava?</summary>
+                            <p>It is USV&rsquo;s well-known international student contest hosted by FIESC, where teams design and build working hardware-and-software prototypes under tight deadlines—exactly the kind of challenge Andrei trains for.</p>
+                        </details>
+
+                        <details>
+                            <summary>How does his CS coursework connect to this webpage?</summary>
+                            <p>This site began as a pure HTML &amp; CSS frontend exercise for web technologies class and grew into a showcase pairing Suceava&rsquo;s real landmarks with simulated Bucovina station telemetry.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REAL SUCEAVA LANDMARKS GALLERY WITH PURE CSS FILTER & LIGHTBOX -->
+            <section id="galerie" class="card-section">
+                <div class="section-header">
+                    <span class="section-kicker">03 / SUCEAVA &amp; BUCOVINA GALLERY</span>
+                    <h2>Real Places Around Suceava</h2>
+                    <p>Filter by setting or click any landmark card to inspect its real location, coordinates, and context in Suceava County. Add your real photos to the <code>images/</code> folder to display them here.</p>
+                </div>
+
+                <!-- Pure CSS Category Filters (IDs preserved for untouched styles.css) -->
+                <input type="radio" name="gallery-filter" id="filter-all" class="filter-radio" checked>
+                <input type="radio" name="gallery-filter" id="filter-alpine" class="filter-radio">
+                <input type="radio" name="gallery-filter" id="filter-coastal" class="filter-radio">
+                <input type="radio" name="gallery-filter" id="filter-urban" class="filter-radio">
+
+                <div class="filter-bar" role="group" aria-label="Filter Suceava landmarks by setting">
+                    <label for="filter-all">All Landmarks (6)</label>
+                    <label for="filter-urban">City &amp; Campus</label>
+                    <label for="filter-coastal">Parks &amp; Lakes</label>
+                    <label for="filter-alpine">Mountains (Rarău)</label>
+                </div>
+
+                <div class="galerie-grid">
+                    <article class="gallery-card" data-category="urban">
+                        <a href="#lightbox-1" class="gallery-link">
+                            <img src="images/cetatea-de-scaun-suceava.jpg" alt="Cetatea de Scaun a Sucevei medieval stone fortress overlooking the city">
+                            <div class="gallery-overlay">
+                                <span class="cat-badge">Heritage &bull; 14th Century</span>
+                                <h3>Cetatea de Scaun a Sucevei</h3>
+                                <p>Inspect Landmark Details &rarr;</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="gallery-card" data-category="urban">
+                        <a href="#lightbox-2" class="gallery-link">
+                            <img src="images/usv-campus-planetariu.jpg" alt="Universitatea Stefan cel Mare din Suceava main campus and Planetarium dome">
+                            <div class="gallery-overlay">
+                                <span class="cat-badge">Campus &bull; Str. Universității 13</span>
+                                <h3>Campus USV &amp; Planetariul</h3>
+                                <p>Inspect Landmark Details &rarr;</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="gallery-card" data-category="urban">
+                        <a href="#lightbox-3" class="gallery-link">
+                            <img src="images/manastirea-sfantul-ioan.jpg" alt="Manastirea Sfantul Ioan cel Nou de la Suceava painted church and bell tower">
+                            <div class="gallery-overlay">
+                                <span class="cat-badge">UNESCO &bull; Old Town Suceava</span>
+                                <h3>Mănăstirea Sf. Ioan cel Nou</h3>
+                                <p>Inspect Landmark Details &rarr;</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="gallery-card" data-category="coastal">
+                        <a href="#lightbox-4" class="gallery-link">
+                            <img src="images/parcul-sipote-statuia.jpg" alt="Statuia ecvestra a lui Stefan cel Mare in Parcul Sipote, Suceava">
+                            <div class="gallery-overlay">
+                                <span class="cat-badge">Park &bull; Cetății Plateau</span>
+                                <h3>Parcul &Scedil;ipote &amp; Statuia</h3>
+                                <p>Inspect Landmark Details &rarr;</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="gallery-card" data-category="alpine">
+                        <a href="#lightbox-5" class="gallery-link">
+                            <img src="images/pietrele-doamnei-rarau.jpg" alt="Pietrele Doamnei limestone spires in Muntii Rarau, Suceava County">
+                            <div class="gallery-overlay">
+                                <span class="cat-badge">Mountain &bull; 1,634 m</span>
+                                <h3>Rarău &mdash; Pietrele Doamnei</h3>
+                                <p>Inspect Landmark Details &rarr;</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="gallery-card" data-category="coastal">
+                        <a href="#lightbox-6" class="gallery-link">
+                            <img src="images/lacul-dragomirna-suceava.jpg" alt="Lacul Dragomirna and fortified Dragomirna Monastery north of Suceava">
+                            <div class="gallery-overlay">
+                                <span class="cat-badge">Lake &amp; Forest &bull; 15 km N</span>
+                                <h3>Lacul &amp; Mănăstirea Dragomirna</h3>
+                                <p>Inspect Landmark Details &rarr;</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PURE CSS LIGHTBOX MODALS (SUCEAVA LANDMARKS) -->
+            <div id="lightbox-1" class="lightbox">
+                <a href="#galerie" class="lightbox-backdrop" aria-label="Close modal"></a>
+                <div class="lightbox-dialog">
+                    <a href="#galerie" class="lightbox-close" aria-label="Close">&times;</a>
+                    <img src="images/cetatea-de-scaun-suceava.jpg" alt="Cetatea de Scaun a Sucevei">
+                    <div class="lightbox-meta">
+                        <h3>Cetatea de Scaun a Sucevei &mdash; Aleea Cetății, Suceava</h3>
+                        <p>Built at the end of the 14th century under Voivode Petru I Mu&scedil;at and strengthened by &Scedil;tefan cel Mare, the fortress sits on a plateau roughly 70 meters above the Suceava River meadow.</p>
+                        <div class="exif-chips">
+                            <span>47.6448&deg; N, 26.2708&deg; E</span><span>~380 m Elevation</span><span>Restored Monument</span><span>Suceava City</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lightbox-2" class="lightbox">
+                <a href="#galerie" class="lightbox-backdrop" aria-label="Close modal"></a>
+                <div class="lightbox-dialog">
+                    <a href="#galerie" class="lightbox-close" aria-label="Close">&times;</a>
+                    <img src="images/usv-campus-planetariu.jpg" alt="Campus USV and Planetariul Suceava">
+                    <div class="lightbox-meta">
+                        <h3>Universitatea &bdquo;&Scedil;tefan cel Mare&rdquo; &amp; Planetariul &mdash; Suceava</h3>
+                        <p>Home to FIESC and thousands of students across 11 faculties, flanked by the iconic white dome of the Suceava Planetarium (opened 1982) and Areni Park across the avenue.</p>
+                        <div class="exif-chips">
+                            <span>47.6410&deg; N, 26.2450&deg; E</span><span>Str. Universității 13</span><span>Corp A / C / E</span><span>Areni District</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lightbox-3" class="lightbox">
+                <a href="#galerie" class="lightbox-backdrop" aria-label="Close modal"></a>
+                <div class="lightbox-dialog">
+                    <a href="#galerie" class="lightbox-close" aria-label="Close">&times;</a>
+                    <img src="images/manastirea-sfantul-ioan.jpg" alt="Manastirea Sfantul Ioan cel Nou de la Suceava">
+                    <div class="lightbox-meta">
+                        <h3>Mănăstirea &bdquo;Sfântul Ioan cel Nou&rdquo; &mdash; Str. Ion Vodă Viteazul 2, Suceava</h3>
+                        <p>Constructed between 1514 and 1522 under Bogdan III and &Scedil;tefăniță Vodă, its St. George Church is inscribed on the UNESCO World Heritage list as one of the painted churches of Moldavia.</p>
+                        <div class="exif-chips">
+                            <span>47.6418&deg; N, 26.2623&deg; E</span><span>UNESCO Site</span><span>1514&ndash;1522</span><span>Historic Center</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lightbox-4" class="lightbox">
+                <a href="#galerie" class="lightbox-backdrop" aria-label="Close modal"></a>
+                <div class="lightbox-dialog">
+                    <a href="#galerie" class="lightbox-close" aria-label="Close">&times;</a>
+                    <img src="images/parcul-sipote-statuia.jpg" alt="Parcul Sipote and Statuia lui Stefan cel Mare in Suceava">
+                    <div class="lightbox-meta">
+                        <h3>Parcul &Scedil;ipote &amp; Statuia lui &Scedil;tefan cel Mare &mdash; Suceava</h3>
+                        <p>Unveiled in 1977 near Cetatea de Scaun, the bronze equestrian monument sculpted by Iftimie Bârleanu looks out across the wooded slopes of Parcul &Scedil;ipote and the Suceava skyline.</p>
+                        <div class="exif-chips">
+                            <span>47.6458&deg; N, 26.2673&deg; E</span><span>23 m Monument</span><span>1977</span><span>Cetății Hill</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lightbox-5" class="lightbox">
+                <a href="#galerie" class="lightbox-backdrop" aria-label="Close modal"></a>
+                <div class="lightbox-dialog">
+                    <a href="#galerie" class="lightbox-close" aria-label="Close">&times;</a>
+                    <img src="images/pietrele-doamnei-rarau.jpg" alt="Pietrele Doamnei in Muntii Rarau, Suceava County">
+                    <div class="lightbox-meta">
+                        <h3>Munții Rarău &mdash; Pietrele Doamnei, Județul Suceava</h3>
+                        <p>Dramatic limestone spires rising to 1,634 meters above Câmpulung Moldovenesc—a favorite weekend destination for USV hikers escaping exam season.</p>
+                        <div class="exif-chips">
+                            <span>47.4480&deg; N, 25.5680&deg; E</span><span>1,634 m Peak</span><span>~75 km from USV</span><span>Eastern Carpathians</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lightbox-6" class="lightbox">
+                <a href="#galerie" class="lightbox-backdrop" aria-label="Close modal"></a>
+                <div class="lightbox-dialog">
+                    <a href="#galerie" class="lightbox-close" aria-label="Close">&times;</a>
+                    <img src="images/lacul-dragomirna-suceava.jpg" alt="Lacul Dragomirna and Dragomirna Monastery near Suceava">
+                    <div class="lightbox-meta">
+                        <h3>Lacul &amp; Mănăstirea Dragomirna &mdash; Mitocu Dragomirnei, Suceava</h3>
+                        <p>Situated 15 km north of Suceava, the 1609 fortified monastery built by Anastasie Crimca overlooks the calm waters of Dragomirna Lake and surrounding beech forests.</p>
+                        <div class="exif-chips">
+                            <span>47.7580&deg; N, 26.2290&deg; E</span><span>1609 Monastery</span><span>15 km N of Suceava</span><span>Forest &amp; Lake</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WEATHER LAB SECTION (REAL SUCEAVA COUNTY STATIONS) -->
+            <section id="weather" class="weather-container">
+                <div class="section-header weather-header">
+                    <span class="section-kicker">04 / BUCOVINA TELEMETRY</span>
+                    <h2>Suceava County Weather Lab</h2>
+                    <p>Switch between three real locations in Suceava County—from the USV Campus plateau to Rarău Ridge and Vatra Dornei—to compare sample microclimates.</p>
+                </div>
+
+                <!-- Pure CSS Station Switcher (IDs preserved for untouched styles.css) -->
+                <input type="radio" name="weather-city" id="city-zurich" class="city-radio" checked>
+                <input type="radio" name="weather-city" id="city-tokyo" class="city-radio">
+                <input type="radio" name="weather-city" id="city-reykjavik" class="city-radio">
+
+                <div class="city-tabs" role="tablist" aria-label="Select Suceava County station">
+                    <label for="city-zurich">&#127891; Suceava (USV Areni &bull; 350m)</label>
+                    <label for="city-tokyo">&#127956; Vatra Dornei (Dorna Basin &bull; 802m)</label>
+                    <label for="city-reykjavik">&#9968; Munții Rarău (Pietrele Doamnei &bull; 1,634m)</label>
+                </div>
+
+                <div class="city-panels">
+                    <!-- SUCEAVA USV PANEL -->
+                    <div class="city-panel">
+                        <div class="weather-app-box">
+                            <div class="weather-current-flex">
+                                <div class="weather-visual">
+                                    <div class="css-sun" aria-hidden="true">
+                                        <span class="sun-core"></span>
+                                        <span class="sun-rays"></span>
+                                    </div>
+                                    <div>
+                                        <h3>Suceava &mdash; USV Campus</h3>
+                                        <div class="current-temp">14&deg;C</div>
+                                        <p class="condition-text">Crisp &amp; Sunny Over Areni &bull; Feels like 13&deg;C</p>
+                                    </div>
+                                </div>
+                                <div class="weather-data">
+                                    <p><strong>Humidity:</strong> 56%</p>
+                                    <p><strong>Wind:</strong> 11 km/h E</p>
+                                    <p><strong>Pressure:</strong> 1017 hPa (Steady)</p>
+                                    <p><strong>Coordinates:</strong> 47.64&deg; N, 26.25&deg; E</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weather-app-box">
+                            <h3>5-Day Suceava Plateau Outlook</h3>
+                            <div class="forecast-grid">
+                                <div class="forecast-day">
+                                    <p><strong>Tue</strong></p>
+                                    <p class="wx-emoji">&#9728;&#65039;</p>
+                                    <p><strong>15&deg;</strong> / 5&deg;</p>
+                                    <p>Clear</p>
+                                </div>
+                                <div class="forecast-day">
+                                    <p><strong>Wed</strong></p>
+                                    <p class="wx-emoji">&#9925;</p>
+                                    <p><strong>14&deg;</strong> / 4&deg;</p>
+                                    <p>Partly Cloudy</p>
+                                </div>
+                                <div class="forecast-day">
+                                    <p><strong>Thu</strong></p>
+                                    <p class="wx-emoji">&#127783;&#65039;</p>
+                                    <p><strong>11&deg;</strong> / 3&deg;</p>
+                                    <p>Light Rain</p>
+                                </div>
+                                <div class="forecast-day">
+                                    <p><strong>Fri</strong></p>
+                                    <p class="wx-emoji">&#9925;</p>
+                                    <p><strong>13&deg;</strong> / 3&deg;</p>
+                                    <p>Breezy</p>
+                                </div>
+                                <div class="forecast-day">
+                                    <p><strong>Sat</strong></p>
+                                    <p class="wx-emoji">&#9728;&#65039;</p>
+                                    <p><strong>17&deg;</strong> / 6&deg;</p>
+                                    <p>Sunny</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weather-app-box">
+                            <h3>Hourly Campus Readings</h3>
+                            <div class="hourly-grid">
+                                <div class="hourly-item"><p><strong>12:00</strong></p><p>&#9728;&#65039;</p><p>13&deg;C</p><p>10 km/h</p></div>
+                                <div class="hourly-item"><p><strong>14:00</strong></p><p>&#9728;&#65039;</p><p>14&deg;C</p><p>11 km/h</p></div>
+                                <div class="hourly-item"><p><strong>16:00</strong></p><p>&#9925;</p><p>14&deg;C</p><p>12 km/h</p></div>
+                                <div class="hourly-item"><p><strong>18:00</strong></p><p>&#9925;</p><p>11&deg;C</p><p>9 km/h</p></div>
+                                <div class="hourly-item"><p><strong>20:00</strong></p><p>&#127769;</p><p>8&deg;C</p><p>6 km/h</p></div>
+                                <div class="hourly-item"><p><strong>22:00</strong></p><p>&#127769;</p><p>6&deg;C</p><p>5 km/h</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VATRA DORNEI PANEL -->
+                    <div class="city-panel">
+                        <div class="weather-app-box">
+                            <div class="weather-current-flex">
+                                <div class="weather-visual">
+                                    <div class="css-rain" aria-hidden="true">
+                                        <span class="cloud-shape"></span>
+                                        <span class="drop d1"></span>
+                                        <span class="drop d2"></span>
+                                        <span class="drop d3"></span>
+                                    </div>
+                                    <div>
+                                        <h3>Vatra Dornei, Suceava</h3>
+                                        <div class="current-temp">11&deg;C</div>
+                                        <p class="condition-text">Passing Mountain Shower &bull; Feels like 9&deg;C</p>
+                                    </div>
+                                </div>
+                                <div class="weather-data">
+                                    <p><strong>Humidity:</strong> 79%</p>
+                                    <p><strong>Wind:</strong> 14 km/h W</p>
+                                    <p><strong>Pressure:</strong> 1014 hPa (Steady)</p>
+                                    <p><strong>Elevation:</strong> 802 m ASL</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weather-app-box">
+                            <h3>5-Day Dorna Basin Outlook</h3>
+                            <div class="forecast-grid">
+                                <div class="forecast-day"><p><strong>Tue</strong></p><p class="wx-emoji">&#127783;&#65039;</p><p><strong>11&deg;</strong> / 2&deg;</p><p>Showers</p></div>
+                                <div class="forecast-day"><p><strong>Wed</strong></p><p class="wx-emoji">&#9925;</p><p><strong>12&deg;</strong> / 1&deg;</p><p>Clearing</p></div>
+                                <div class="forecast-day"><p><strong>Thu</strong></p><p class="wx-emoji">&#9728;&#65039;</p><p><strong>14&deg;</strong> / 2&deg;</p><p>Sunny</p></div>
+                                <div class="forecast-day"><p><strong>Fri</strong></p><p class="wx-emoji">&#9728;&#65039;</p><p><strong>15&deg;</strong> / 3&deg;</p><p>Bright</p></div>
+                                <div class="forecast-day"><p><strong>Sat</strong></p><p class="wx-emoji">&#9925;</p><p><strong>13&deg;</strong> / 2&deg;</p><p>Mild</p></div>
+                            </div>
+                        </div>
+
+                        <div class="weather-app-box">
+                            <h3>Hourly Valley Readings</h3>
+                            <div class="hourly-grid">
+                                <div class="hourly-item"><p><strong>12:00</strong></p><p>&#127783;&#65039;</p><p>11&deg;C</p><p>14 km/h</p></div>
+                                <div class="hourly-item"><p><strong>14:00</strong></p><p>&#127783;&#65039;</p><p>11&deg;C</p><p>15 km/h</p></div>
+                                <div class="hourly-item"><p><strong>16:00</strong></p><p>&#9729;&#65039;</p><p>10&deg;C</p><p>11 km/h</p></div>
+                                <div class="hourly-item"><p><strong>18:00</strong></p><p>&#9925;</p><p>8&deg;C</p><p>8 km/h</p></div>
+                                <div class="hourly-item"><p><strong>20:00</strong></p><p>&#127769;</p><p>5&deg;C</p><p>5 km/h</p></div>
+                                <div class="hourly-item"><p><strong>22:00</strong></p><p>&#127769;</p><p>3&deg;C</p><p>4 km/h</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MUNTII RARAU PANEL -->
+                    <div class="city-panel">
+                        <div class="weather-app-box">
+                            <div class="weather-current-flex">
+                                <div class="weather-visual">
+                                    <div class="css-cloud" aria-hidden="true">
+                                        <span class="cloud-shape"></span>
+                                    </div>
+                                    <div>
+                                        <h3>Munții Rarău &mdash; Pietrele Doamnei</h3>
+                                        <div class="current-temp">5&deg;C</div>
+                                        <p class="condition-text">Alpine Cloud Cap &bull; Feels like 1&deg;C</p>
+                                    </div>
+                                </div>
+                                <div class="weather-data">
+                                    <p><strong>Humidity:</strong> 71%</p>
+                                    <p><strong>Wind:</strong> 28 km/h NW</p>
+                                    <p><strong>Pressure:</strong> 1012 hPa</p>
+                                    <p><strong>Elevation:</strong> 1,634 m Peak</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="weather-app-box">
+                            <h3>5-Day Ridge Outlook</h3>
+                            <div class="forecast-grid">
+                                <div class="forecast-day"><p><strong>Tue</strong></p><p class="wx-emoji">&#9729;&#65039;</p><p><strong>5&deg;</strong> / -1&deg;</p><p>Ridge Fog</p></div>
+                                <div class="forecast-day"><p><strong>Wed</strong></p><p class="wx-emoji">&#127784;&#65039;</p><p><strong>3&deg;</strong> / -2&deg;</p><p>Flurries</p></div>
+                                <div class="forecast-day"><p><strong>Thu</strong></p><p class="wx-emoji">&#9925;</p><p><strong>5&deg;</strong> / 0&deg;</p><p>Clearing</p></div>
+                                <div class="forecast-day"><p><strong>Fri</strong></p><p class="wx-emoji">&#9728;&#65039;</p><p><strong>8&deg;</strong> / 1&deg;</p><p>Crisp Sun</p></div>
+                                <div class="forecast-day"><p><strong>Sat</strong></p><p class="wx-emoji">&#9728;&#65039;</p><p><strong>9&deg;</strong> / 2&deg;</p><p>Clear Views</p></div>
+                            </div>
+                        </div>
+
+                        <div class="weather-app-box">
+                            <h3>Hourly Ridge Readings</h3>
+                            <div class="hourly-grid">
+                                <div class="hourly-item"><p><strong>12:00</strong></p><p>&#9729;&#65039;</p><p>5&deg;C</p><p>28 km/h</p></div>
+                                <div class="hourly-item"><p><strong>14:00</strong></p><p>&#127788;&#65039;</p><p>5&deg;C</p><p>30 km/h</p></div>
+                                <div class="hourly-item"><p><strong>16:00</strong></p><p>&#9729;&#65039;</p><p>4&deg;C</p><p>25 km/h</p></div>
+                                <div class="hourly-item"><p><strong>18:00</strong></p><p>&#9925;</p><p>2&deg;C</p><p>20 km/h</p></div>
+                                <div class="hourly-item"><p><strong>20:00</strong></p><p>&#10024;</p><p>0&deg;C</p><p>15 km/h</p></div>
+                                <div class="hourly-item"><p><strong>22:00</strong></p><p>&#10024;</p><p>-1&deg;C</p><p>12 km/h</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="card-section">
+                <div class="section-header">
+                    <span class="section-kicker">05 / SUCEAVA CAMPUS DESK</span>
+                    <h2>Get in Touch</h2>
+                    <p>Connect regarding CS student projects at USV, Bucovina trail notes, or fine-art photography from Suceava County.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <div class="availability-badge">
+                            <span class="live-dot"></span> Spring Semester &bull; Suceava
+                        </div>
+                        <h3>University &amp; City Coordinates</h3>
+                        <p>Universitatea &bdquo;&Scedil;tefan cel Mare&rdquo; din Suceava<br>Str. Universității nr. 13, 720229 Suceava, Romania</p>
+
+                        <div class="contact-details">
+                            <div>
+                                <span>Student Lab Contact (Fictional)</span>
+                                <strong>andrei.popescu@student.usv.example</strong>
+                            </div>
+                            <div>
+                                <span>Time Zone</span>
+                                <strong>EET / EEST (Bucharest &amp; Suceava)</strong>
+                            </div>
+                            <div>
+                                <span>Official Local Links</span>
+                                <div class="social-pills">
+                                    <a href="https://usv.ro" target="_blank" rel="noopener noreferrer">USV.ro</a>
+                                    <a href="https://fiesc.usv.ro" target="_blank" rel="noopener noreferrer">FIESC.usv.ro</a>
+                                    <a href="#galerie">Suceava Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="#contact-sent" method="get">
+                        <div class="topic-selector">
+                            <span class="topic-label">Inquiry Type</span>
+                            <div class="topic-pills">
+                                <label><input type="radio" name="topic" checked><span>USV CS Project</span></label>
+                                <label><input type="radio" name="topic"><span>Bucovina Photo</span></label>
+                                <label><input type="radio" name="topic"><span>Weather Node</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="floating-field">
+                                <input type="text" id="name" name="name" placeholder=" " required minlength="2">
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="floating-field">
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="floating-field">
+                            <textarea id="message" name="message" rows="4" placeholder=" " required minlength="10"></textarea>
+                            <label for="message">Write your message about Suceava or USV...</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message &rarr;</button>
+
+                        <div id="contact-sent" class="form-toast" role="status">
+                            &#10003; Message noted! Thank you for reaching out to Suceava Horizon.
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <strong>Suceava Horizon</strong>
+                    <p>A pure HTML &amp; CSS showcase highlighting real landmarks of Suceava &amp; Bucovina alongside CS student life at Universitatea &bdquo;&Scedil;tefan cel Mare&rdquo; din Suceava.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Suceava &amp; USV</a></li>
+                        <li><a href="#student">USV CS Student</a></li>
+                        <li><a href="#galerie">Suceava Gallery</a></li>
+                        <li><a href="#weather">Weather Lab</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Suceava County</h4>
+                    <ul>
+                        <li><a href="#weather">Suceava (USV Areni)</a></li>
+                        <li><a href="#weather">Vatra Dornei</a></li>
+                        <li><a href="#weather">Munții Rarău</a></li>
+                        <li><a href="https://usv.ro" target="_blank" rel="noopener noreferrer">USV Official</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Suceava Horizon &mdash; Inspired by USV FIESC &amp; Bucovina.</p>
+                <a href="#home" class="back-to-top">Back to Top &uarr;</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
