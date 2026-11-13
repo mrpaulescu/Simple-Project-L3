@@ -63,6 +63,21 @@ h2 {
 	margin-bottom: 1rem;
 }
 
+/* Gallery Section */
+#galerie .galerie-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+#galerie .galerie-grid img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
 footer {
 	text-align: center;
 	padding: 1rem 0;
@@ -258,5 +273,11 @@ footer {
 
 	.hourly-grid {
 		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	#galerie .galerie-grid {
+		grid-template-columns: 1fr;
 	}
 }
